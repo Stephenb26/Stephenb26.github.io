@@ -1,14 +1,71 @@
+/* 
+    Name: Stephen Bean
+    Course: IS LT 4355
+    File: style.css
+    Description: Stylesheet for the portfolio website and homepage hero section.
+*/
 
-/* Styles the main heading on the About page */
+/* Styles the main headings on the website */
 h1 {
     color: #0F2742;
     font-family: Merriweather, Georgia, serif;
     font-size: 36px;
 }
 
-/* Styles the paragraph text on the About page */
+/* Styles the paragraph text on the website */
 p {
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
+
+/* Hero section styling begins here */
+.hero {
+    background-color: #0F2742;
+    color: #F5F7FA;
+    padding: 80px 40px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Keeps the hero content from stretching too wide */
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Styles the hero section headline */
+.hero h1 {
+    color: #F5F7FA;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Styles the hero section supporting paragraph */
+.hero p {
+    color: #F5F7FA;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Styles the hero section call-to-action link as a button */
+.hero-button {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #0F2742;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+/* Adds a hover effect to the hero button */
+.hero-button:hover {
+    background-color: #F5F7FA;
+    color: #0F2742;
+}
+/* Hero section styling ends here */
