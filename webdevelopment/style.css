@@ -61,4 +61,23 @@ p {
     background-color: #F5F7FA;
     color: #0F2742;
 }
-/* Hero section styling ends here */
+/* Styles the resume PDF link*/
+.resume-link {
+    display: inline-block;
+    color: #0F2742;
+    background-color: #D4AF37;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 15px 0;
+    border: 2px solid #0F2742;
+    border-radius: 6px;
+}
+
+/* Adds a hover effect to the resume PDF link */
+.resume-link:hover {
+    background-color: #0F2742;
+    color: #F5F7FA;
+}
+
