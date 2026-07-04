@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Name: Stephen Bean
+    Date: July 3, 2026
+    Course: IS LT 4355
+    Description: Boilerplate template with navigation menu for portfolio website.
+-->
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8">
+
+    <!-- Responsive layout for different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title for the browser tab -->
+    <title>Starter Template</title>
+
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <!-- Header section with logo and navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
+            <span class="site-name">Stephen Bean</span>
+        </div>
+
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content will go here -->
+    <main>
+        <h1>Hello, Welcome to my page!</h1>
+        <p>This is where the main content of the page will be placed.</p>
+    </main>
+
+    <!-- Footer section contains author and current date -->
+    <footer>
+        <p>Stephen Bean | July 3, 2026</p>
+    </footer>
+</body>
+
+</html>
