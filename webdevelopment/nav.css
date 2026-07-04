@@ -1,0 +1,76 @@
+/*
+    Name: Stephen Bean
+    Course: IS LT 4355
+    File: nav.css
+    Description: Flexbox navigation styling for portfolio website.
+*/
+
+/* Main header layout using Flexbox */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0F2742;
+    padding: 16px 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Logo and site name area */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Site logo image */
+.site-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Site name text */
+.site-name {
+    color: #F5F7FA;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation list layout */
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation links */
+.main-nav a {
+    color: #F5F7FA;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+/* Hover and focus effect for navigation links */
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: #D4AF37;
+    color: #0F2742;
+}
+
+/* Simple responsive adjustment for smaller screens */
+@media screen and (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
