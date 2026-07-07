@@ -1,103 +1,38 @@
-/* Styles the main headings on the website */
+
+/* Styles the main heading on the About page */
 h1 {
     color: #0F2742;
     font-family: Merriweather, Georgia, serif;
     font-size: 36px;
 }
 
-/* Styles the paragraph text on the website */
+/* Styles the paragraph text on the About page */
 p {
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 
-/* Hero section styling begins here */
-.hero {
-    background-color: #0F2742;
-    color: #F5F7FA;
-    padding: 80px 40px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Keeps the hero content from stretching too wide */
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Styles the hero section headline */
-.hero h1 {
-    color: #F5F7FA;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-/* Styles the hero section supporting paragraph */
-.hero p {
-    color: #F5F7FA;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-/* Styles the hero section call-to-action link as a button */
-.hero-button {
-    display: inline-block;
-    background-color: #D4AF37;
-    color: #0F2742;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-}
-
-/* Adds a hover effect to the hero button */
-.hero-button:hover {
+/* Reflection page box model styling begins here */
+.reflection-box {
     background-color: #F5F7FA;
-    color: #0F2742;
-}
-/* Styles the resume PDF link*/
-.resume-link {
-    display: inline-block;
-    color: #0F2742;
-    background-color: #D4AF37;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 12px 24px;
-    margin: 15px 0;
     border: 2px solid #0F2742;
-    border-radius: 6px;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
 }
 
-/* Adds a hover effect to the resume PDF link */
-.resume-link:hover {
-    background-color: #0F2742;
-    color: #F5F7FA;
-}
-/* Styles the unordered list on the About page */
-.focus-list {
-    list-style-type: square;
-    margin: 15px 0 25px 30px;
-    padding: 10px 20px;
-    background-color: #F5F7FA;
-    border-left: 4px solid #D4AF37;
-}
-
-/* Styles each list item */
-.focus-list li {
-    color: #0F2742;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-/* Adds a small hover effect to the list items */
-.focus-list li:hover {
+/* Styles the first letter of the first reflection paragraph */
+.first-reflection::first-letter {
     color: #D4AF37;
+    font-size: 42px;
+    font-family: Merriweather, Georgia, serif;
+    font-weight: bold;
 }
+
+/* Indents every reflection paragraph except the first one */
+.reflection-box p:not(.first-reflection) {
+    text-indent: 30px;
+}
+/* Reflection page box model styling ends here */

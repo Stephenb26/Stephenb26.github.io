@@ -2,7 +2,7 @@
     Name: Stephen Bean
     Course: IS LT 4355
     File: nav.css
-    Description: Flexbox navigation styling for portfolio website.
+    Description: Flexbox navigation styling with a two-tier dropdown menu.
 */
 
 /* Main header layout using Flexbox */
@@ -36,13 +36,18 @@
     font-weight: bold;
 }
 
-/* Navigation list layout */
+/* Main navigation list */
 .main-nav ul {
     display: flex;
     list-style-type: none;
     gap: 18px;
     margin: 0;
     padding: 0;
+}
+
+/* Navigation list items */
+.main-nav li {
+    position: relative;
 }
 
 /* Navigation links */
@@ -52,16 +57,39 @@
     font-size: 17px;
     padding: 10px 14px;
     border-radius: 6px;
+    display: block;
 }
 
-/* Hover and focus effect for navigation links */
+/* Hover and focus effect */
 .main-nav a:hover,
 .main-nav a:focus {
     background-color: #D4AF37;
     color: #0F2742;
 }
 
-/* Simple responsive adjustment for smaller screens */
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0F2742;
+    border: 1px solid #D4AF37;
+    min-width: 160px;
+    z-index: 10;
+}
+
+/* Dropdown items stack vertically */
+.dropdown-menu li {
+    width: 100%;
+}
+
+/* Shows dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive adjustment for smaller screens */
 @media screen and (max-width: 700px) {
     .site-header {
         flex-direction: column;
@@ -72,5 +100,9 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
     }
 }
