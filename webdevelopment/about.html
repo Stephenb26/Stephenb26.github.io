@@ -3,7 +3,8 @@
 
 <!--
     Name: Stephen Bean
-    Date: June 21, 2026
+    File: about.html
+    Date: July 5, 2026
     Course: IS LT 4355
     Description: About page for my personal portfolio website.
 -->
@@ -18,24 +19,44 @@
     <!-- Title for the browser tab -->
     <title>About Stephen Bean</title>
 
-    <!-- Link to external CSS file -->
+    <!-- Link to external CSS files -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
-    <!-- Header section contains the site name and navigation -->
-    <header>
-        <h1>About Stephen Bean</h1>
+    <!-- Header section with logo and two-tier navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
+            <span class="site-name">Stephen Bean</span>
+        </div>
 
-        <!-- Main navigation for the website -->
-        <nav>
-            <p>Home | About | Projects | Reflection | Contact</p>
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Portfolio</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="reflection.html">Reflection</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Main content for the about page -->
     <main>
         <section>
+            <h1>About Stephen Bean</h1>
+
             <h3>Personal Background</h3>
             <p>
                 My name is Stephen Bean, and I currently live in North Texas. I previously lived in Missouri for
@@ -55,19 +76,21 @@
                 and maintaining a large server fleet for my organization. I enjoy my job and the challenges it brings.
             </p>
         </section>
-    <section>
-    <h3>Education and Career Focus Areas</h3>
 
-    <!-- Unordered list of academic and career focus areas -->
-    <ul class="focus-list">
-        <li>Information Technology</li>
-        <li>Network Engineering</li>
-        <li>Network Security</li>
-        <li>Server Administration</li>
-        <li>Technology Leadership</li>
-     </ul>
-    </section>
-         <section>
+        <section>
+            <h3>Education and Career Focus Areas</h3>
+
+            <!-- Unordered list of academic and career focus areas -->
+            <ul class="focus-list">
+                <li>Information Technology</li>
+                <li>Network Engineering</li>
+                <li>Network Security</li>
+                <li>Server Administration</li>
+                <li>Technology Leadership</li>
+            </ul>
+        </section>
+
+        <section>
             <h3>Resume</h3>
             <p>
                 A copy of my resume is available below.
@@ -82,7 +105,7 @@
 
     <!-- Footer section contains author name and current date -->
     <footer>
-        <p>Stephen Bean | June 21, 2026</p>
+        <p>Stephen Bean | July 5, 2026</p>
     </footer>
 </body>
 
