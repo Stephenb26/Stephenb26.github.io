@@ -3,56 +3,96 @@
 
 <!--
     Name: Stephen Bean
-    Date: July 3, 2026
+    File: Beantemplate.html
+    Date: July 10, 2026
     Course: IS LT 4355
-    Description: Boilerplate template with navigation menu for portfolio website.
 -->
 
 <head>
-    <!-- Character encoding -->
     <meta charset="utf-8">
-
-    <!-- Responsive layout for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title for the browser tab -->
-    <title>Starter Template</title>
+    <title>Stephen Bean Portfolio</title>
 
-    <!-- Link to external CSS files -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
-    <!-- Header section with logo and navigation -->
+
+    <!-- Header and navigation -->
     <header class="site-header">
         <div class="logo-area">
             <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
             <span class="site-name">Stephen Bean</span>
         </div>
 
-        <!-- Main navigation menu -->
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
                 <li><a href="reflection.html">Reflection</a></li>
+
+                <li class="dropdown">
+                    <a href="projects.html">Portfolio</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="projects.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html#technical">
+                                Technical Skills
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main content will go here -->
+    <!-- Main content -->
     <main>
-        <h1>Hello, Welcome to my page!</h1>
+        <h1>Hello, Welcome to My Page!</h1>
         <p>This is where the main content of the page will be placed.</p>
     </main>
 
-    <!-- Footer section contains author and current date -->
-    <footer>
-        <p>Stephen Bean | July 3, 2026</p>
-    </footer>
-</body>
+    <!-- Contact footer -->
+    <footer class="contact-footer">
+        <div class="footer-contact">
+            <p>
+                <img
+                    src="images/phone-icon.png"
+                    alt="Phone"
+                    class="contact-icon"
+                >
+                (555) 555-4355
+            </p>
 
+            <p>
+                <img
+                    src="images/email-icon.png"
+                    alt="Email"
+                    class="contact-icon"
+                >
+                <a href="mailto:swbw42@missouri.edu">
+                    swbw42@missouri.edu
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
 </html>
