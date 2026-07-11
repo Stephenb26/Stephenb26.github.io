@@ -1,4 +1,103 @@
-/* Print styles for the About page */
+/*
+    Name: Stephen Bean
+    File: style.css
+    Date: July 10, 2026
+    Course: IS LT 4355
+*/
+
+/* Main headings */
+h1 {
+    color: #0F2742;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 36px;
+}
+
+/* Paragraph text */
+p {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* Reflection box */
+.reflection-box {
+    background-color: #F5F7FA;
+    border: 2px solid #0F2742;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* First reflection letter */
+.first-reflection::first-letter {
+    color: #D4AF37;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* Reflection indentation */
+.reflection-box p:not(.first-reflection) {
+    text-indent: 30px;
+}
+
+/* Contact footer */
+.contact-footer {
+    background-image:
+        linear-gradient(rgba(15, 39, 66, 0.88), rgba(15, 39, 66, 0.88)),
+        url("images/footer-background.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Footer contact layout */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Footer contact items */
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Footer links */
+.footer-contact a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact icons */
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Small screen footer */
+@media screen and (max-width: 600px) {
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* About page print styles */
 @media print {
     @page {
         margin: 1in;
@@ -49,5 +148,9 @@
     body.about-page footer p {
         font-size: 11pt;
         margin: 0;
+    }
+
+    body.about-page .contact-icon {
+        display: none;
     }
 }
