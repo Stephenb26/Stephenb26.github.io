@@ -4,39 +4,34 @@
 <!--
     Name: Stephen Bean
     File: about.html
-    Date: July 5, 2026
+    Date: July 10, 2026
     Course: IS LT 4355
-    Description: About page for my personal portfolio website.
+    Description: About page for my portfolio website.
 -->
 
 <head>
-    <!-- Character encoding -->
     <meta charset="utf-8">
-
-    <!-- Responsive layout for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title for the browser tab -->
     <title>About Stephen Bean</title>
 
-    <!-- Link to external CSS files -->
+    <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 
-<body>
-    <!-- Header section with logo and two-tier navigation -->
+<body class="about-page">
+
+    <!-- Header and navigation -->
     <header class="site-header">
         <div class="logo-area">
             <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
             <span class="site-name">Stephen Bean</span>
         </div>
 
-        <!-- Main navigation menu -->
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-
                 <li><a href="about.html">About</a></li>
 
                 <li class="dropdown">
@@ -52,9 +47,9 @@
         </nav>
     </header>
 
-    <!-- Main content for the about page -->
+    <!-- About page content -->
     <main>
-        <section>
+        <section class="personal-background">
             <h1>About Stephen Bean</h1>
 
             <h3>Personal Background</h3>
@@ -77,10 +72,9 @@
             </p>
         </section>
 
-        <section>
+        <section class="education-details">
             <h3>Education and Career Focus Areas</h3>
 
-            <!-- Unordered list of academic and career focus areas -->
             <ul class="focus-list">
                 <li>Information Technology</li>
                 <li>Network Engineering</li>
@@ -92,21 +86,18 @@
 
         <section>
             <h3>Resume</h3>
-            <p>
-                A copy of my resume is available below.
-            </p>
+            <p>A copy of my resume is available below.</p>
 
-            <!-- Relative PDF link styled with the box model -->
             <a href="Stephen_Bean_Resume.pdf" class="resume-link" target="_blank">
                 View My Resume
             </a>
         </section>
     </main>
 
-    <!-- Footer section contains author name and current date -->
+    <!-- Contact information -->
     <footer>
-        <p>Stephen Bean | July 5, 2026</p>
+        <p>Stephen Bean | Email: your-email@example.com</p>
     </footer>
-</body>
 
+</body>
 </html>
