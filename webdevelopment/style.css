@@ -45,7 +45,7 @@ p {
 /* Contact footer */
 .contact-footer {
     background-image:
-        linear-gradient(rgba(15, 39, 66, 0.88), rgba(15, 39, 66, 0.88)),
+        linear-gradient(rgba(15, 39, 66, 0.45), rgba(15, 39, 66, 0.45)),
         url("images/footer-background.jpg");
     background-position: center;
     background-size: cover;
