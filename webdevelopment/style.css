@@ -1,189 +1,300 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!--
+/*
     Name: Stephen Bean
-    File: contact.html
+    File: style.css
     Date: July 12, 2026
     Course: IS LT 4355
-    Description: Contact page for my portfolio website.
--->
+*/
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Main headings */
+h1 {
+    color: #0F2742;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 36px;
+}
 
-    <title>Contact Stephen Bean</title>
+/* Paragraph text */
+p {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+/* Reflection box */
+.reflection-box {
+    background-color: #F5F7FA;
+    border: 2px solid #0F2742;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+}
 
-    <!-- Website styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav.css">
-</head>
+/* First reflection letter */
+.first-reflection::first-letter {
+    color: #D4AF37;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+}
 
-<body class="contact-page">
+/* Reflection indentation */
+.reflection-box p:not(.first-reflection) {
+    text-indent: 30px;
+}
 
-    <!-- Header and navigation -->
-    <header class="site-header">
-        <div class="logo-area">
-            <img
-                src="logo.png"
-                alt="Stephen Bean site logo"
-                class="site-logo"
-            >
-            <span class="site-name">Stephen Bean</span>
-        </div>
+/* About page media */
+.about-media {
+    margin: 30px 0;
+}
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="reflection.html">Reflection</a></li>
+.about-media figure {
+    margin: 25px 0;
+}
 
-                <li class="dropdown">
-                    <a href="projects.html">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="projects.html#professional">
-                                Professional Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="projects.html#academic">
-                                Academic Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="projects.html#technical">
-                                Technical Skills
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+.about-media figcaption {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 8px;
+}
 
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* About page photo */
+.about-photo {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border: 3px solid #0F2742;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    <!-- Contact page content -->
-    <main class="contact-main">
-        <section class="contact-section">
-            <h1>Contact Me</h1>
+.about-photo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
 
-            <p>
-                Thank you for visiting my portfolio. Complete the form below
-                if you would like to contact me about my experience, projects,
-                or professional opportunities.
-            </p>
+/* Resume video */
+.resume-video {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background-color: #000000;
+    border: 3px solid #0F2742;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
-            <!-- Contact form -->
-            <form class="contact-form" action="#" method="get">
+/* Contact page */
+.contact-main {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
 
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <select id="title" name="title" required>
-                        <option value="" disabled selected>
-                            Select your title
-                        </option>
-                        <option value="mr">Mr.</option>
-                        <option value="ms">Ms.</option>
-                        <option value="mrs">Mrs.</option>
-                        <option value="dr">Dr.</option>
-                    </select>
-                </div>
+.contact-section {
+    background-color: #F5F7FA;
+    border: 2px solid #0F2742;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-                <div class="form-group">
-                    <label for="full-name">Full Name</label>
-                    <input
-                        type="text"
-                        id="full-name"
-                        name="full-name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-                </div>
+.contact-section h1 {
+    margin-top: 0;
+}
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        required
-                    >
-                </div>
+.contact-section > p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
-                <div class="form-group">
-                    <label for="contact-reason">Reason for Contact</label>
-                    <select
-                        id="contact-reason"
-                        name="contact-reason"
-                        required
-                    >
-                        <option value="" disabled selected>
-                            Select a reason for contacting me
-                        </option>
-                        <option value="employment">
-                            Employment Opportunity
-                        </option>
-                        <option value="networking">
-                            Professional Networking
-                        </option>
-                        <option value="project">
-                            Project Question
-                        </option>
-                        <option value="general">
-                            General Message
-                        </option>
-                    </select>
-                </div>
+/* Contact form */
+.contact-form {
+    width: 100%;
+}
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="7"
-                        placeholder="Enter your message"
-                        required
-                    ></textarea>
-                </div>
+.form-group {
+    margin-bottom: 20px;
+}
 
-                <button type="submit" class="submit-button">
-                    Submit
-                </button>
-            </form>
-        </section>
-    </main>
+.form-group label {
+    display: block;
+    color: #0F2742;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
 
-    <!-- Contact footer -->
-    <footer class="contact-footer">
-        <div class="footer-contact">
-            <p>
-                <img
-                    src="images/phone-icon.png"
-                    alt="Phone"
-                    class="contact-icon"
-                >
-                (555) 555-4355
-            </p>
+.form-group input,
+.form-group select,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    color: #333333;
+    background-color: #FFFFFF;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 
-            <p>
-                <img
-                    src="images/email-icon.png"
-                    alt="Email"
-                    class="contact-icon"
-                >
-                <a href="mailto:swbw42@missouri.edu">
-                    swbw42@missouri.edu
-                </a>
-            </p>
-        </div>
-    </footer>
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
 
-</body>
-</html>
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0F2742;
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* Submit button */
+.submit-button {
+    color: #FFFFFF;
+    background-color: #0F2742;
+    border: 2px solid #0F2742;
+    border-radius: 5px;
+    padding: 12px 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    color: #0F2742;
+    background-color: #D4AF37;
+}
+
+/* Contact footer */
+.contact-footer {
+    background-image: url("images/footer-background.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Footer contact layout */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Footer contact items */
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Footer links */
+.footer-contact a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact icons */
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+/* About page print styles */
+@media print {
+    @page {
+        margin: 1in;
+    }
+
+    body.about-page,
+    body.about-page * {
+        color: #000000;
+        font-family: Georgia, "Times New Roman", serif;
+        background: transparent;
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+    body.about-page .site-header,
+    body.about-page main section,
+    body.about-page .personal-background h3,
+    body.about-page .education-details h3 {
+        display: none;
+    }
+
+    body.about-page main .personal-background,
+    body.about-page main .education-details {
+        display: block;
+    }
+
+    body.about-page h1 {
+        font-size: 24pt;
+        margin: 0 0 18pt;
+    }
+
+    body.about-page .personal-background p,
+    body.about-page .education-details ul {
+        font-size: 12pt;
+        line-height: 1.4;
+        margin-bottom: 18pt;
+    }
+
+    body.about-page .education-details ul {
+        padding-left: 24pt;
+    }
+
+    body.about-page footer {
+        margin-top: 24pt;
+        border: 0;
+    }
+
+    body.about-page footer p {
+        font-size: 11pt;
+        margin: 0;
+    }
+
+    body.about-page .contact-icon {
+        display: none;
+    }
+}
