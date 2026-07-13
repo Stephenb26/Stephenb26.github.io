@@ -1,7 +1,7 @@
 /*
     Name: Stephen Bean
     File: style.css
-    Date: July 10, 2026
+    Date: July 12, 2026
     Course: IS LT 4355
 */
 
@@ -40,6 +40,51 @@ p {
 /* Reflection indentation */
 .reflection-box p:not(.first-reflection) {
     text-indent: 30px;
+}
+
+/* About page media */
+.about-media {
+    margin: 30px 0;
+}
+
+.about-media figure {
+    margin: 25px 0;
+}
+
+.about-media figcaption {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* About page photo */
+.about-photo {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border: 3px solid #0F2742;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Resume video */
+.resume-video {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background-color: #000000;
+    border: 3px solid #0F2742;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Contact footer */
