@@ -1,10 +1,11 @@
 /*
     Name: Stephen Bean
-    Course: IS LT 4355
     File: nav.css
+    Date: July 18, 2026
+    Course: IS LT 4355
 */
 
-/* Main header layout using Flexbox */
+/* Header layout */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -14,28 +15,36 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Logo and site name area */
+/* Logo area */
 .logo-area {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Site logo image */
+/* Site logo */
 .site-logo {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
-/* Site name text */
+/* Site name */
 .site-name {
     color: #F5F7FA;
     font-size: 22px;
     font-weight: bold;
 }
 
-/* Main navigation list only */
+/* Hamburger hidden on desktop */
+.hamburger {
+    display: none;
+    color: #F5F7FA;
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Main navigation */
 .main-nav > ul {
     display: flex;
     list-style-type: none;
@@ -44,76 +53,83 @@
     padding: 0;
 }
 
-/* Navigation list items */
 .main-nav li {
     position: relative;
 }
 
 /* Navigation links */
 .main-nav a {
+    display: block;
     color: #F5F7FA;
     text-decoration: none;
     font-size: 17px;
     padding: 10px 14px;
     border-radius: 6px;
-    display: block;
 }
 
-/* Hover and focus effect for navigation links */
 .main-nav a:hover,
 .main-nav a:focus {
-    background-color: #D4AF37;
     color: #0F2742;
+    background-color: #D4AF37;
 }
 
-/* Dropdown menu hidden by default */
+/* Dropdown menu */
 .main-nav .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
+    min-width: 180px;
+    margin: 0;
+    padding: 0;
     background-color: #0F2742;
     border: 1px solid #D4AF37;
-    min-width: 180px;
-    padding: 0;
-    margin: 0;
     list-style-type: none;
     z-index: 10;
 }
 
-/* Dropdown list items stack vertically */
 .main-nav .dropdown-menu li {
     display: block;
     width: 100%;
 }
 
-/* Dropdown links */
 .main-nav .dropdown-menu a {
     display: block;
     padding: 10px 14px;
     white-space: nowrap;
 }
 
-/* Show dropdown only when hovering over Portfolio */
-.main-nav .dropdown:hover .dropdown-menu {
+/* Desktop dropdown */
+.main-nav .dropdown:hover .dropdown-menu,
+.main-nav .dropdown:focus-within .dropdown-menu {
     display: block;
 }
 
-/* Simple responsive adjustment for smaller screens */
+/* Mobile navigation */
 @media screen and (max-width: 700px) {
     .site-header {
-        flex-direction: column;
-        gap: 16px;
+        flex-direction: row;
+        padding: 12px 18px;
     }
 
-    .main-nav > ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .main-nav {
+        display: none;
     }
 
     .main-nav .dropdown-menu {
-        position: static;
-        margin-top: 6px;
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .site-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .site-name {
+        font-size: 19px;
     }
 }
