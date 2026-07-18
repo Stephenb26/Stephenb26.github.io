@@ -4,7 +4,7 @@
 <!--
     Name: Stephen Bean
     File: about.html
-    Date: July 12, 2026
+    Date: July 18, 2026
     Course: IS LT 4355
 -->
 
@@ -30,6 +30,9 @@
             <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
             <span class="site-name">Stephen Bean</span>
         </div>
+
+        <!-- Mobile menu icon -->
+        <span class="hamburger" aria-label="Mobile menu">&#9776;</span>
 
         <nav class="main-nav">
             <ul>
@@ -63,12 +66,23 @@
         </nav>
     </header>
 
-    <!-- About page content -->
-    <main>
-        <section class="personal-background">
-            <h1>About Stephen Bean</h1>
+    <!-- About page grid -->
+    <main class="about-grid">
+        <h1 class="about-title">About Stephen Bean</h1>
 
-            <h3>Personal Background</h3>
+        <!-- Professional photo -->
+        <figure class="about-photo-card">
+            <img
+                src="media/stephen-bean.png"
+                alt="Professional portrait of Stephen Bean"
+                class="about-photo"
+            >
+            <figcaption>Stephen Bean</figcaption>
+        </figure>
+
+        <!-- Personal background -->
+        <section class="personal-background">
+            <h2>Personal Background</h2>
             <p>
                 My name is Stephen Bean, and I currently live in North Texas. I previously lived in Missouri for
                 several years before moving back home. I am married and have two young children. I am a senior
@@ -77,37 +91,9 @@
             </p>
         </section>
 
-        <!-- Photo and resume video -->
-        <section class="about-media">
-            <h2>Photo and Video Introduction</h2>
-
-            <figure>
-                <img
-                    src="media/stephen-bean.png"
-                    alt="Professional portrait of Stephen Bean"
-                    class="about-photo"
-                >
-                <figcaption>Stephen Bean</figcaption>
-            </figure>
-
-            <figure>
-                <video
-                    class="resume-video"
-                    controls
-                    aria-label="Video introduction by Stephen Bean"
-                >
-                    <source
-                        src="media/stephen-bean-resume.mp4"
-                        type="video/mp4"
-                    >
-                    Your browser does not support the video tag.
-                </video>
-                <figcaption>My professional video introduction</figcaption>
-            </figure>
-        </section>
-
-        <section>
-            <h3>Professional and Academic Goals</h3>
+        <!-- Professional goals -->
+        <section class="professional-goals">
+            <h2>Professional and Academic Goals</h2>
             <p>
                 I currently manage IT infrastructure for emergency service personnel for a municipal government in
                 the Dallas area. My career aspirations include moving into a director role because I enjoy leading
@@ -117,8 +103,9 @@
             </p>
         </section>
 
+        <!-- Education details -->
         <section class="education-details">
-            <h3>Education and Career Focus Areas</h3>
+            <h2>Education and Career Focus Areas</h2>
 
             <ul class="focus-list">
                 <li>Information Technology</li>
@@ -129,8 +116,9 @@
             </ul>
         </section>
 
-        <section>
-            <h3>Resume</h3>
+        <!-- Resume link -->
+        <section class="resume-section">
+            <h2>Resume</h2>
             <p>A copy of my resume is available below.</p>
 
             <a
@@ -141,6 +129,22 @@
                 View My Resume
             </a>
         </section>
+
+        <!-- Video introduction -->
+        <figure class="about-video-card">
+            <video
+                class="resume-video"
+                controls
+                aria-label="Video introduction by Stephen Bean"
+            >
+                <source
+                    src="media/stephen-bean-resume.mp4"
+                    type="video/mp4"
+                >
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>My professional video introduction</figcaption>
+        </figure>
     </main>
 
     <!-- Contact footer -->
