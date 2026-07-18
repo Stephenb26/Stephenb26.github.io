@@ -1,7 +1,7 @@
 /*
     Name: Stephen Bean
     File: style.css
-    Date: July 12, 2026
+    Date: July 18, 2026
     Course: IS LT 4355
 */
 
@@ -42,20 +42,81 @@ p {
     text-indent: 30px;
 }
 
-/* About page media */
-.about-media {
-    margin: 30px 0;
+/* About page grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+        "title title title"
+        "photo bio bio"
+        "goals goals goals"
+        "education resume video";
+    gap: 24px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 36px auto;
 }
 
-.about-media figure {
-    margin: 25px 0;
+/* About grid areas */
+.about-title {
+    grid-area: title;
+    margin: 0;
 }
 
-.about-media figcaption {
+.about-photo-card {
+    grid-area: photo;
+}
+
+.personal-background {
+    grid-area: bio;
+}
+
+.professional-goals {
+    grid-area: goals;
+}
+
+.education-details {
+    grid-area: education;
+}
+
+.resume-section {
+    grid-area: resume;
+}
+
+.about-video-card {
+    grid-area: video;
+}
+
+/* About content cards */
+.about-grid section,
+.about-photo-card,
+.about-video-card {
+    box-sizing: border-box;
+    background-color: #F5F7FA;
+    border: 2px solid #0F2742;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-grid h2 {
+    color: #0F2742;
+    font-family: Merriweather, Georgia, serif;
+    margin-top: 0;
+}
+
+.about-grid p,
+.about-grid li {
+    line-height: 1.6;
+}
+
+.about-grid figcaption {
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-top: 8px;
+    text-align: center;
 }
 
 /* About page photo */
@@ -64,6 +125,7 @@ p {
     width: 100%;
     max-width: 350px;
     height: auto;
+    margin: 0 auto;
     border: 3px solid #0F2742;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -81,10 +143,29 @@ p {
     width: 100%;
     max-width: 400px;
     height: auto;
+    margin: 0 auto;
     background-color: #000000;
     border: 3px solid #0F2742;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Resume link */
+.resume-link {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #0F2742;
+    border: 2px solid #0F2742;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.resume-link:hover,
+.resume-link:focus {
+    color: #0F2742;
+    background-color: #D4AF37;
 }
 
 /* Contact page */
@@ -220,8 +301,42 @@ p {
     object-fit: contain;
 }
 
-/* Mobile styles */
+/* Tablet layout */
+@media screen and (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "title title"
+            "photo bio"
+            "goals goals"
+            "education education"
+            "resume video";
+    }
+}
+
+/* Mobile layout */
 @media screen and (max-width: 600px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "photo"
+            "bio"
+            "goals"
+            "education"
+            "resume"
+            "video";
+        width: 94%;
+        gap: 16px;
+        margin: 20px auto;
+    }
+
+    .about-grid section,
+    .about-photo-card,
+    .about-video-card {
+        padding: 18px;
+    }
+
     .footer-contact {
         flex-direction: column;
         gap: 15px;
@@ -257,20 +372,33 @@ p {
     }
 
     body.about-page .site-header,
-    body.about-page main section,
-    body.about-page .personal-background h3,
-    body.about-page .education-details h3 {
+    body.about-page .about-photo-card,
+    body.about-page .about-video-card,
+    body.about-page main section {
         display: none;
+    }
+
+    body.about-page main {
+        display: block;
+        width: auto;
+        margin: 0;
     }
 
     body.about-page main .personal-background,
     body.about-page main .education-details {
         display: block;
+        border: 0;
+        padding: 0;
     }
 
     body.about-page h1 {
         font-size: 24pt;
         margin: 0 0 18pt;
+    }
+
+    body.about-page .personal-background h2,
+    body.about-page .education-details h2 {
+        display: none;
     }
 
     body.about-page .personal-background p,
