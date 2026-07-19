@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Name: Stephen Bean
+    File: project.html
+    Date: July 19, 2026
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stephen Bean Projects</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Website styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body id="top">
+
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
+            <span class="site-name">Stephen Bean</span>
+        </div>
+
+        <!-- Mobile menu control -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+
+                <li class="dropdown">
+                    <a href="project.html">Portfolio</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="project.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="project.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects page -->
+    <main class="projects-main">
+        <section class="projects-introduction">
+            <h1>Projects and Experience</h1>
+
+            <p>
+                This page highlights professional experience and academic
+                projects that have helped me grow in information technology.
+                The examples focus on system support, information access,
+                networking, programming, and database work.
+            </p>
+        </section>
+
+        <!-- Professional projects -->
+        <section id="professional" class="competency-section">
+            <div class="section-heading">
+                <h2>Professional Projects</h2>
+                <p>
+                    These projects show how I use technology to support
+                    employees and improve access to important information.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Records Management System Experience</h3>
+
+                    <p>
+                        I contributed to work involving an in-house records
+                        management system developed with an application
+                        development team. The system supports operational
+                        needs by organizing records and giving authorized
+                        employees access to accurate information. The system
+                        had to work with field personnel and those in office.
+                    </p>
+
+                    <!-- Workflow artifact -->
+                    <figure class="project-artifact">
+                        <div class="workflow-preview">
+                            <div class="workflow-step">User Request</div>
+                            <span class="workflow-arrow">&#8594;</span>
+                            <div class="workflow-step">Application Review</div>
+                            <span class="workflow-arrow">&#8594;</span>
+                            <div class="workflow-step">Records Database</div>
+                        </div>
+
+                        <figcaption>
+                            Sanitized records-system workflow
+                        </figcaption>
+                    </figure>
+
+                    <h4>Reflection</h4>
+                    <p>
+                        This experience helped me understand that successful
+                        technology projects must solve real user problems.
+                        Reliability, security, and clear workflows are all
+                        important when employees depend on a system during
+                        daily operations.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Internal Dashboard Development</h3>
+
+                    <p>
+                        I created intranet-accessible dashboards that provide
+                        updates on personnel workloads, server workloads, and
+                        instructions for accessing internal systems. The goal
+                        was to make frequently requested information easier
+                        for both technical and nontechnical employees to find.
+                    </p>
+
+                    <!-- Dashboard artifact -->
+                    <figure class="project-artifact">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-metric">
+                                <span class="metric-title">Systems Online</span>
+                                <strong>12 of 12</strong>
+                            </div>
+
+                            <div class="dashboard-metric">
+                                <span class="metric-title">Open Requests</span>
+                                <strong>8</strong>
+                            </div>
+
+                            <div class="dashboard-metric">
+                                <span class="metric-title">Server Status</span>
+                                <strong>Healthy</strong>
+                            </div>
+                        </div>
+
+                        <figcaption>
+                            Sanitized example of an internal status dashboard
+                        </figcaption>
+                    </figure>
+
+                    <h4>Reflection</h4>
+                    <p>
+                        This project showed me how useful a straightforward
+                        dashboard can be when it is designed around the needs
+                        of its users. Clear labels and current information can
+                        reduce confusion and save employees time.
+                    </p>
+                </article>
+            </div>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+
+        <!-- Technical projects -->
+        <section id="technical" class="competency-section">
+            <div class="section-heading">
+                <h2>Technical Projects</h2>
+                <p>
+                    These projects support my interests in network engineering,
+                    security, and infrastructure troubleshooting.
+                </p>
+            </div>
+
+            <article class="project-card featured-project">
+                <h3>Virtual Network Labs</h3>
+
+                <p>
+                    I use virtual network labs to practice routing, switching,
+                    IP addressing, connectivity testing, and troubleshooting.
+                    A controlled lab provides a safe place to test
+                    configurations and better understand how devices
+                    communicate across different networks.
+                </p>
+
+                <!-- Network artifact -->
+                <figure class="project-artifact">
+                    <div class="network-preview">
+                        <div class="network-device">Client PC</div>
+                        <span class="network-line">&#8596;</span>
+                        <div class="network-device">Access Switch</div>
+                        <span class="network-line">&#8596;</span>
+                        <div class="network-device">Router</div>
+                        <span class="network-line">&#8596;</span>
+                        <div class="network-device">Test Server</div>
+                    </div>
+
+                    <figcaption>
+                        Simplified virtual network lab topology
+                    </figcaption>
+                </figure>
+
+                <h4>Reflection</h4>
+                <p>
+                    Virtual labs help connect classroom concepts to actual
+                    troubleshooting steps. They allow me to practice commands,
+                    make configuration changes, identify mistakes, and verify
+                    connectivity without affecting a production network.
+                </p>
+            </article>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+
+        <!-- Academic projects -->
+        <section id="academic" class="competency-section">
+            <div class="section-heading">
+                <h2>Academic Projects</h2>
+                <p>
+                    My coursework has included programming, databases, web
+                    development, and other technical problem-solving projects.
+                </p>
+            </div>
+
+            <article class="project-card featured-project">
+                <h3>Programming and Database Coursework</h3>
+
+                <p>
+                    My academic projects have included Python applications,
+                    SQL queries, database design, and web development. These
+                    assignments gave me experience organizing data, writing
+                    logic, testing results, and correcting problems before
+                    considering a project complete.
+                </p>
+
+                <!-- Code artifact -->
+                <figure class="project-artifact">
+                    <pre class="code-preview"><code>SELECT department,
+       COUNT(*) AS employee_count
+FROM employees
+GROUP BY department
+ORDER BY employee_count DESC;</code></pre>
+
+                    <figcaption>
+                        Example of a grouped SQL query
+                    </figcaption>
+                </figure>
+
+                <h4>Reflection</h4>
+                <p>
+                    Programming and database projects have helped me become
+                    more comfortable breaking larger problems into smaller
+                    steps. They have also reinforced the importance of testing,
+                    clear organization, and careful review.
+                </p>
+            </article>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+    </main>
+
+    <!-- Contact footer -->
+    <footer class="contact-footer">
+        <div class="footer-contact">
+            <p>
+                <img
+                    src="images/phone-icon.png"
+                    alt="Phone"
+                    class="contact-icon"
+                >
+                (555) 555-4355
+            </p>
+
+            <p>
+                <img
+                    src="images/email-icon.png"
+                    alt="Email"
+                    class="contact-icon"
+                >
+                <a href="mailto:swbw42@missouri.edu">
+                    swbw42@missouri.edu
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
