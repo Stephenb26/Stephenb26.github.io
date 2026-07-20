@@ -169,6 +169,17 @@ p {
     background-color: #D4AF37;
 }
 
+.project-dashboard-image {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 2px solid #d99a00;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(217, 154, 0, 0.35);
+}
+
 /* Contact page */
 .contact-main {
     width: 90%;
