@@ -298,6 +298,17 @@ p {
     text-align: center;
 }
 
+/* Dashboard project image */
+.dashboard-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #0F2742;
+    border-radius: 6px;
+}
+
 /* Workflow artifact */
 .workflow-preview {
     display: flex;
@@ -621,7 +632,12 @@ p {
     }
 
     .project-artifact {
-        padding: 16px;
+        padding: 12px;
+    }
+
+    .dashboard-image {
+        width: 100%;
+        height: auto;
     }
 
     /* Stack workflow artifact */
