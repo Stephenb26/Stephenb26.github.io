@@ -3,81 +3,214 @@
 
 <!--
     Name: Stephen Bean
-    Date: June 28, 2026
+    File: index.html
+    Date: July 21, 2026
     Course: IS LT 4355
-    Description: Homepage for my personal portfolio website with a styled hero section.
+    Description: Home page for my personal portfolio website.
 -->
 
 <head>
-    <!-- Character encoding -->
     <meta charset="utf-8">
-
-    <!-- Responsive layout for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title for the browser tab -->
-    <title>Stephen Bean Portfolio Home</title>
+    <title>Stephen Bean Portfolio</title>
 
-    <!-- Link to external CSS file -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 
-<body>
-    <!-- Header section contains the site name and navigation -->
-    <header>
-        <h1>Stephen Bean Portfolio</h1>
+<body id="top">
 
-        <!-- Main navigation for the website -->
-        <nav>
-            <p>Home | About | Projects | Reflection | Contact</p>
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img
+                src="logo.png"
+                alt="Stephen Bean site logo"
+                class="site-logo"
+            >
+            <span class="site-name">Stephen Bean</span>
+        </div>
+
+        <!-- Mobile menu -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+
+                <li class="dropdown">
+                    <a href="project.html">Portfolio</a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="project.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="project.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Main content for the homepage -->
-    <main>
-        <!-- Hero section begins here -->
-        <section class="hero">
+    <!-- Home page content -->
+    <main class="home-main">
+
+        <!-- Hero section -->
+        <section class="home-hero">
             <div class="hero-content">
-                <h1>Welcome to My Portfolio</h1>
+                <p class="hero-introduction">Welcome to my portfolio</p>
+
+                <h1>Information Technology, Leadership, and Professional Growth</h1>
 
                 <p>
-                    My name is Stephen Bean, and this portfolio highlights my background, education,
-                    IT experience, and career goals. I am building this site to organize examples of
-                    my work and show how my academic and professional experience connect to my future
-                    goals in technology leadership.
+                    My name is Stephen Bean. I am an information technology
+                    professional with experience supporting public service
+                    operations, network infrastructure, servers, and internal
+                    technology systems.
                 </p>
 
-                <a href="about.html" class="hero-button">Learn More About Me</a>
+                <div class="hero-links">
+                    <a href="about.html" class="primary-button">
+                        Learn More About Me
+                    </a>
+
+                    <a href="project.html" class="secondary-button">
+                        View My Projects
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-focus">
+                <h2>Professional Focus</h2>
+
+                <ul>
+                    <li>Information Technology</li>
+                    <li>Network Engineering</li>
+                    <li>Network Security</li>
+                    <li>Server Administration</li>
+                    <li>Technology Leadership</li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- Portfolio overview -->
+        <section class="home-overview">
+            <h2>Explore My Portfolio</h2>
+
+            <p>
+                This website highlights my background, career goals,
+                technical experience, academic work, and reflections on
+                what I have learned throughout my coursework.
+            </p>
+
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <h3>About Me</h3>
+
+                    <p>
+                        Learn about my background, professional goals,
+                        education, and career interests.
+                    </p>
+
+                    <a href="about.html">Visit the About page</a>
+                </article>
+
+                <article class="overview-card">
+                    <h3>Projects and Experience</h3>
+
+                    <p>
+                        View examples of my professional experience,
+                        technical projects, and academic work.
+                    </p>
+
+                    <a href="project.html">View my projects</a>
+                </article>
+
+                <article class="overview-card">
+                    <h3>Course Reflection</h3>
+
+                    <p>
+                        Read about the skills and lessons I have gained
+                        while developing this portfolio.
+                    </p>
+
+                    <a href="reflection.html">Read my reflection</a>
+                </article>
             </div>
         </section>
-        <!-- Hero section ends here -->
 
-        <section>
-            <h3>Professional Focus</h3>
+        <!-- Contact section -->
+        <section class="home-contact">
+            <h2>Get in Touch</h2>
+
             <p>
-                My career interests include information technology, network engineering, network security,
-                server administration, and supporting technology systems used in public service environments.
+                Visit my contact page if you would like to learn more about
+                my experience or contact me about a professional opportunity.
             </p>
-        </section>
 
-        <section>
-            <h3>Portfolio Purpose</h3>
-            <p>
-                As this website develops, it will include information about my education, career goals,
-                technical projects, and reflections on what I have learned throughout my coursework.
-            </p>
+            <a href="contact.html" class="primary-button">
+                Contact Me
+            </a>
         </section>
-
-        <!-- Meaningful quote or motto for the homepage -->
-        <blockquote>
-            "The only way to do great work is to love what you do." — Steve Jobs
-        </blockquote>
     </main>
 
-    <!-- Footer section contains author name and current date -->
-    <footer>
-        <p>Stephen Bean | June 28, 2026</p>
-    </footer>
-</body>
+    <!-- Contact footer -->
+    <footer class="contact-footer">
+        <div class="footer-contact">
+            <p>
+                <img
+                    src="images/phone-icon.png"
+                    alt="Phone"
+                    class="contact-icon"
+                >
+                (555) 555-4355
+            </p>
 
+            <p>
+                <img
+                    src="images/email-icon.png"
+                    alt="Email"
+                    class="contact-icon"
+                >
+
+                <a href="mailto:swbw42@missouri.edu">
+                    swbw42@missouri.edu
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
 </html>
