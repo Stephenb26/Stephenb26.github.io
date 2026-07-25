@@ -1,1091 +1,425 @@
-/*
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
     Name: Stephen Bean
-    File: style.css
+    File: project.html
     Date: July 24, 2026
     Course: IS LT 4355
-    Description: Main styles for my portfolio website.
-*/
-
-/* Smooth anchor scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom font from Google Fonts applied to site */
-/* Custom styles for all <h1> elements */
-h1 {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 36px;
-    text-shadow: 1px 1px 2px rgba(15, 39, 66, 0.18);
-}
-
-/* Paragraph text */
-p {
-    color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-}
-
-/* Reflection box */
-.reflection-box {
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 8px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 900px;
-}
-
-/* First reflection letter */
-.first-reflection::first-letter {
-    color: #D4AF37;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 42px;
-    font-weight: bold;
-}
-
-/* Reflection indentation */
-.reflection-box p:not(.first-reflection) {
-    text-indent: 30px;
-}
-
-/* Home page */
-.home-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 36px auto;
-}
-
-/* Home hero */
-.home-hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 28px;
-    align-items: stretch;
-}
-
-.hero-content {
-    box-sizing: border-box;
-    background-color: #F5F7FA;
-    border-left: 7px solid #D4AF37;
-    border-radius: 10px;
-    padding: 42px;
-}
-
-.hero-introduction {
-    color: #8A6D00;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-top: 0;
-    text-transform: uppercase;
-}
-
-.hero-content h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin: 12px 0 20px;
-}
-
-.hero-content > p {
-    line-height: 1.7;
-}
-
-.hero-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 28px;
-}
-
-/* Home buttons */
-.primary-button,
-.secondary-button {
-    display: inline-block;
-    border: 2px solid #0F2742;
-    border-radius: 6px;
-    padding: 12px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.primary-button {
-    color: #FFFFFF;
-    background-color: #0F2742;
-}
-
-.secondary-button {
-    color: #0F2742;
-    background-color: #FFFFFF;
-}
-
-.primary-button:hover,
-.primary-button:focus,
-.secondary-button:hover,
-.secondary-button:focus {
-    color: #0F2742;
-    background-color: #D4AF37;
-}
-
-/* Professional focus */
-.hero-focus {
-    box-sizing: border-box;
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border-bottom: 6px solid #D4AF37;
-    border-radius: 10px;
-    padding: 32px;
-}
-
-.hero-focus h2 {
-    color: #FFFFFF;
-    font-family: Merriweather, Georgia, serif;
-    margin-top: 0;
-}
-
-.hero-focus ul {
-    padding-left: 22px;
-    margin-bottom: 0;
-}
-
-.hero-focus li {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-/* Portfolio overview */
-.home-overview {
-    margin-top: 50px;
-}
-
-.home-overview > h2,
-.home-contact h2 {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.home-overview > p {
-    max-width: 900px;
-    line-height: 1.6;
-}
-
-.overview-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 28px;
-}
-
-.overview-card {
-    box-sizing: border-box;
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 10px;
-    padding: 26px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.overview-card h3 {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 22px;
-    margin-top: 0;
-}
-
-.overview-card p {
-    line-height: 1.6;
-}
-
-.overview-card a {
-    color: #0F2742;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.overview-card a:hover,
-.overview-card a:focus {
-    color: #8A6D00;
-}
-
-/* Home contact */
-.home-contact {
-    background-color: #F5F7FA;
-    border-left: 7px solid #D4AF37;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 50px 0 36px;
-}
-
-.home-contact h2 {
-    margin-top: 0;
-}
-
-.home-contact p {
-    line-height: 1.6;
-}
-
-/* Custom style for home page h2 elements */
-.home-main h2 {
-    letter-spacing: 0.6px;
-}
-
-/* About page grid */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-areas:
-        "title title title"
-        "photo bio bio"
-        "goals goals goals"
-        "education resume video";
-    gap: 24px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 36px auto;
-}
-
-/* About grid areas */
-.about-title {
-    grid-area: title;
-    margin: 0;
-}
-
-.about-photo-card {
-    grid-area: photo;
-}
-
-.personal-background {
-    grid-area: bio;
-}
-
-.professional-goals {
-    grid-area: goals;
-}
-
-.education-details {
-    grid-area: education;
-}
-
-.resume-section {
-    grid-area: resume;
-}
-
-.about-video-card {
-    grid-area: video;
-}
-
-/* Keeps shorter cards at natural height */
-.education-details,
-.resume-section {
-    align-self: start;
-}
-
-/* About content cards */
-.about-grid section,
-.about-photo-card,
-.about-video-card {
-    box-sizing: border-box;
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 10px;
-    padding: 24px;
-    margin: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.about-grid h2 {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-    margin-top: 0;
-}
-
-.about-grid p,
-.about-grid li {
-    line-height: 1.6;
-}
-
-.about-grid figcaption {
-    color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin-top: 8px;
-    text-align: center;
-}
-
-/* About page photo */
-.about-photo {
-    display: block;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    margin: 0 auto;
-    border: 3px solid #0F2742;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-photo:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-}
-
-/* Resume video */
-.resume-video {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-    background-color: #000000;
-    border: 3px solid #0F2742;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-/* Resume link */
-.resume-link {
-    display: inline-block;
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border: 2px solid #0F2742;
-    border-radius: 5px;
-    padding: 10px 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-}
-
-.resume-link:hover,
-.resume-link:focus {
-    color: #0F2742;
-    background-color: #D4AF37;
-}
-
-/* Projects page */
-.projects-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 36px auto;
-}
-
-/* Projects introduction */
-.projects-introduction {
-    background-color: #F5F7FA;
-    border-left: 7px solid #D4AF37;
-    border-radius: 8px;
-    padding: 24px 30px;
-    margin-bottom: 32px;
-}
-
-.projects-introduction h1 {
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.projects-introduction p {
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-/* Project sections */
-.competency-section {
-    margin-bottom: 40px;
-    scroll-margin-top: 20px;
-}
-
-.section-heading {
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border-bottom: 5px solid #D4AF37;
-    border-radius: 8px 8px 0 0;
-    padding: 20px 24px;
-}
-
-.section-heading h2 {
-    color: #FFFFFF;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 28px;
-    margin: 0 0 8px;
-}
-
-.section-heading p {
-    color: #FFFFFF;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Project grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 24px;
-}
-
-/* Project cards */
-.project-card {
-    box-sizing: border-box;
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 10px;
-    padding: 26px;
-    margin-top: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.project-grid .project-card {
-    margin-top: 0;
-}
-
-.project-card h3,
-.project-card h4 {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-}
-
-.project-card h3 {
-    font-size: 23px;
-    margin-top: 0;
-}
-
-.project-card h4 {
-    font-size: 19px;
-    margin-bottom: 8px;
-}
-
-.project-card p {
-    line-height: 1.6;
-}
-
-/* Full-width project */
-.featured-project {
-    width: 100%;
-}
-
-/* Project artifacts */
-.project-artifact {
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-    border: 2px solid #D4AF37;
-    border-radius: 8px;
-    padding: 22px;
-    margin: 24px 0;
-}
-
-.project-artifact figcaption {
-    color: #475569;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin-top: 14px;
-    text-align: center;
-}
-
-/* Dashboard image */
-.dashboard-image {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border: 2px solid #0F2742;
-    border-radius: 6px;
-}
-
-/* Workflow artifact */
-.workflow-preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
-
-.workflow-step {
-    flex: 1;
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border-radius: 6px;
-    padding: 18px 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-.workflow-arrow {
-    color: #D4AF37;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-/* Dashboard artifact */
-.dashboard-preview {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-}
-
-.dashboard-metric {
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border-top: 5px solid #D4AF37;
-    border-radius: 6px;
-    padding: 18px 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.metric-title {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.dashboard-metric strong {
-    display: block;
-    font-size: 21px;
-}
-
-/* Network artifact */
-.network-preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-}
-
-.network-device {
-    flex: 1;
-    color: #0F2742;
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 6px;
-    padding: 18px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-.network-line {
-    color: #D4AF37;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* Code artifact */
-.code-preview {
-    overflow-x: auto;
-    color: #F5F7FA;
-    background-color: #0F2742;
-    border-left: 6px solid #D4AF37;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0;
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 16px;
-    line-height: 1.5;
-    white-space: pre;
-}
-
-/* Back-to-top links */
-.back-to-top {
-    display: inline-block;
-    color: #0F2742;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-top: 16px;
-    text-decoration: none;
-}
-
-.back-to-top:hover,
-.back-to-top:focus {
-    color: #8A6D00;
-    text-decoration: underline;
-}
-
-/* Skills table */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin: 24px 0;
-}
-
-.skills-table {
-    width: 100%;
-    min-width: 650px;
-    border: 2px solid #0F2742;
-    border-collapse: collapse;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.skills-table caption {
-    color: #0F2742;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 0 0 12px;
-    text-align: left;
-}
-
-.skills-table th,
-.skills-table td {
-    border: 1px solid #0F2742;
-    padding: 14px;
-    text-align: left;
-    vertical-align: top;
-}
-
-.skills-table thead th {
-    color: #FFFFFF;
-    background-color: #0F2742;
-}
-
-/* Alternate table rows */
-.skills-table tbody tr:nth-child(odd) {
-    background-color: #E4EAF1;
-}
-
-.skills-table tbody tr:nth-child(even) {
-    background-color: #FFFFFF;
-}
-
-.skills-table tbody th {
-    color: #0F2742;
-    font-weight: bold;
-}
-
-/* Contact page */
-.contact-main {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-.contact-section {
-    background-color: #F5F7FA;
-    border: 2px solid #0F2742;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contact-section h1 {
-    margin-top: 0;
-}
-
-.contact-section > p {
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* Contact form */
-.contact-form {
-    width: 100%;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    color: #0F2742;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    box-sizing: border-box;
-    width: 100%;
-    color: #333333;
-    background-color: #FFFFFF;
-    border: 1px solid #777777;
-    border-radius: 5px;
-    padding: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #0F2742;
-    outline: 2px solid #D4AF37;
-    outline-offset: 2px;
-}
-
-/* Submit button */
-.submit-button {
-    color: #FFFFFF;
-    background-color: #0F2742;
-    border: 2px solid #0F2742;
-    border-radius: 5px;
-    padding: 12px 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.submit-button:hover,
-.submit-button:focus {
-    color: #0F2742;
-    background-color: #D4AF37;
-}
-
-/* Contact footer */
-.contact-footer {
-    background-image: url("images/footer-background.jpg");
-    background-position: center;
-    background-size: cover;
-    padding: 25px;
-    text-align: center;
-}
-
-/* Footer layout */
-.footer-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-/* Footer contact items */
-.footer-contact p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #FFFFFF;
-    font-size: 16px;
-    margin: 0;
-}
-
-/* Footer links */
-.footer-contact a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.footer-contact a:hover,
-.footer-contact a:focus {
-    text-decoration: underline;
-}
-
-/* Contact icons */
-.contact-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Footer icon animation */
-.contact-icon:hover {
-    transform: scale(1.25) rotate(6deg);
-    filter: drop-shadow(0 0 5px #D4AF37);
-}
-
-/* Tablet layout */
-@media screen and (max-width: 900px) {
-    /* Tablet home page */
-    .home-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .overview-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Tablet about page */
-    .about-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-areas:
-            "title title"
-            "photo bio"
-            "goals goals"
-            "education education"
-            "resume video";
-    }
-
-    /* Tablet projects page */
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .network-preview {
-        gap: 8px;
-    }
-
-    .network-device {
-        padding: 15px 8px;
-        font-size: 14px;
-    }
-}
-
-/* Mobile layout */
-@media screen and (max-width: 600px) {
-    /* Mobile home page */
-    .home-main {
-        width: 94%;
-        margin: 20px auto;
-    }
-
-    .home-hero {
-        gap: 18px;
-    }
-
-    .hero-content,
-    .hero-focus {
-        padding: 22px;
-    }
-
-    .hero-content h1 {
-        font-size: 31px;
-    }
-
-    .hero-links {
-        flex-direction: column;
-    }
-
-    .primary-button,
-    .secondary-button {
-        box-sizing: border-box;
-        width: 100%;
-        text-align: center;
-    }
-
-    .home-overview {
-        margin-top: 34px;
-    }
-
-    .overview-grid {
-        gap: 16px;
-    }
-
-    .overview-card {
-        padding: 20px;
-    }
-
-    .home-contact {
-        padding: 22px;
-        margin-top: 34px;
-    }
-
-    /* Mobile about page */
-    .about-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "photo"
-            "bio"
-            "goals"
-            "education"
-            "resume"
-            "video";
-        width: 94%;
-        gap: 16px;
-        margin: 20px auto;
-    }
-
-    .about-grid section,
-    .about-photo-card,
-    .about-video-card {
-        padding: 18px;
-    }
-
-    /* Mobile project page */
-    .projects-main {
-        width: 94%;
-        margin: 20px auto;
-    }
-
-    .projects-introduction {
-        padding: 20px;
-    }
-
-    .projects-introduction h1 {
-        font-size: 30px;
-    }
-
-    .section-heading {
-        padding: 18px;
-    }
-
-    .section-heading h2 {
-        font-size: 24px;
-    }
-
-    .project-card {
-        padding: 18px;
-    }
-
-    .project-card h3 {
-        font-size: 21px;
-    }
-
-    .project-artifact {
-        padding: 12px;
-    }
-
-    .dashboard-image {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Stack workflow artifact */
-    .workflow-preview {
-        flex-direction: column;
-    }
-
-    .workflow-step {
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    .workflow-arrow {
-        transform: rotate(90deg);
-    }
-
-    /* Stack dashboard artifact */
-    .dashboard-preview {
-        grid-template-columns: 1fr;
-    }
-
-    /* Stack network artifact */
-    .network-preview {
-        flex-direction: column;
-    }
-
-    .network-device {
-        box-sizing: border-box;
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .network-line {
-        transform: rotate(90deg);
-    }
-
-    .code-preview {
-        font-size: 13px;
-        padding: 14px;
-    }
-
-    /* Responsive table */
-    .skills-table {
-        font-size: 14px;
-    }
-
-    .skills-table caption {
-        font-size: 19px;
-    }
-
-    .skills-table th,
-    .skills-table td {
-        padding: 10px;
-    }
-
-    /* Mobile contact page */
-    .contact-main {
-        width: 94%;
-        margin: 20px auto;
-    }
-
-    .contact-section {
-        padding: 20px;
-    }
-
-    .submit-button {
-        width: 100%;
-    }
-
-    /* Mobile footer */
-    .footer-contact {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-/* About page print styles */
-@media print {
-    @page {
-        margin: 1in;
-    }
-
-    body.about-page,
-    body.about-page * {
-        color: #000000;
-        font-family: Georgia, "Times New Roman", serif;
-        background: transparent;
-        box-shadow: none;
-        text-shadow: none;
-    }
-
-    body.about-page .site-header,
-    body.about-page .about-photo-card,
-    body.about-page .about-video-card,
-    body.about-page main section {
-        display: none;
-    }
-
-    body.about-page main {
-        display: block;
-        width: auto;
-        margin: 0;
-    }
-
-    body.about-page main .personal-background,
-    body.about-page main .education-details {
-        display: block;
-        border: 0;
-        padding: 0;
-    }
-
-    body.about-page h1 {
-        font-size: 24pt;
-        margin: 0 0 18pt;
-    }
-
-    body.about-page .personal-background h2,
-    body.about-page .education-details h2 {
-        display: none;
-    }
-
-    body.about-page .personal-background p,
-    body.about-page .education-details ul {
-        font-size: 12pt;
-        line-height: 1.4;
-        margin-bottom: 18pt;
-    }
-
-    body.about-page .education-details ul {
-        padding-left: 24pt;
-    }
-
-    body.about-page footer {
-        margin-top: 24pt;
-        border: 0;
-    }
-
-    body.about-page footer p {
-        font-size: 11pt;
-        margin: 0;
-    }
-
-    body.about-page .contact-icon {
-        display: none;
-    }
-}
+    Description: Projects and experience page for my portfolio website.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stephen Bean Projects</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Website styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body id="top">
+
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img
+                src="logo.png"
+                alt="Stephen Bean site logo"
+                class="site-logo"
+            >
+            <span class="site-name">Stephen Bean</span>
+        </div>
+
+        <!-- Mobile menu -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+
+                <li class="dropdown">
+                    <a href="project.html">Portfolio</a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="project.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="project.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects page -->
+    <main class="projects-main">
+
+        <!-- Page introduction -->
+        <section class="projects-introduction">
+            <h1>Projects and Experience</h1>
+
+            <p>
+                This page highlights professional experience and academic
+                projects that have helped me grow in information technology.
+                The examples focus on system support, information access,
+                networking, programming, and database work.
+            </p>
+        </section>
+
+        <!-- Professional projects -->
+        <section id="professional" class="competency-section">
+            <div class="section-heading">
+                <h2>Professional Projects</h2>
+
+                <p>
+                    These projects show how I use technology to support
+                    employees and improve access to important information.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Records Management System Experience</h3>
+
+                    <p>
+                        I contributed to work involving an in-house records
+                        management system developed with an application
+                        development team. The system supports operational
+                        needs by organizing records and giving authorized
+                        employees access to accurate information.
+                    </p>
+
+                    <!-- Workflow artifact -->
+                    <figure class="project-artifact">
+                        <div class="workflow-preview">
+                            <div class="workflow-step">
+                                User Request
+                            </div>
+
+                            <span class="workflow-arrow">
+                                &#8594;
+                            </span>
+
+                            <div class="workflow-step">
+                                Application Review
+                            </div>
+
+                            <span class="workflow-arrow">
+                                &#8594;
+                            </span>
+
+                            <div class="workflow-step">
+                                Records Database
+                            </div>
+                        </div>
+
+                        <figcaption>
+                            Example of a records management workflow
+                        </figcaption>
+                    </figure>
+
+                    <h4>Reflection</h4>
+
+                    <p>
+                        This experience helped me understand that successful
+                        technology projects must solve real user problems.
+                        Reliability, security, and clear workflows are all
+                        important when employees depend on a system during
+                        daily operations.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Internal Dashboard Development</h3>
+
+                    <p>
+                        I created intranet-accessible dashboards that provide
+                        updates on personnel workloads, server workloads, and
+                        instructions for accessing internal systems. The goal
+                        was to make frequently requested information easier
+                        for both technical and nontechnical employees to find.
+                    </p>
+
+                    <!-- Dashboard artifact -->
+                    <figure class="project-artifact">
+                        <img
+                            src="images/server-fleet-dashboard.png"
+                            alt="Server fleet dashboard showing internal system information"
+                            class="dashboard-image"
+                        >
+
+                        <figcaption>
+                            Example of an internal server fleet dashboard
+                        </figcaption>
+                    </figure>
+
+                    <h4>Reflection</h4>
+
+                    <p>
+                        This project showed me how useful a straightforward
+                        dashboard can be when it is designed around the needs
+                        of its users. Clear labels and current information can
+                        reduce confusion and save employees time.
+                    </p>
+                </article>
+            </div>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+
+        <!-- Technical projects -->
+        <section id="technical" class="competency-section">
+            <div class="section-heading">
+                <h2>Technical Projects</h2>
+
+                <p>
+                    These projects support my interests in network engineering,
+                    security, and infrastructure troubleshooting.
+                </p>
+            </div>
+
+            <article class="project-card featured-project">
+                <h3>Virtual Network Labs</h3>
+
+                <p>
+                    I use virtual network labs to practice routing, switching,
+                    IP addressing, connectivity testing, and troubleshooting.
+                    A controlled lab provides a safe place to test
+                    configurations and better understand how devices
+                    communicate across different networks.
+                </p>
+
+                <!-- Network artifact -->
+                <figure class="project-artifact">
+                    <div class="network-preview">
+                        <div class="network-device">Client PC</div>
+
+                        <span class="network-line">
+                            &#8596;
+                        </span>
+
+                        <div class="network-device">Access Switch</div>
+
+                        <span class="network-line">
+                            &#8596;
+                        </span>
+
+                        <div class="network-device">Router</div>
+
+                        <span class="network-line">
+                            &#8596;
+                        </span>
+
+                        <div class="network-device">Test Server</div>
+                    </div>
+
+                    <figcaption>
+                        Virtual network lab topology
+                    </figcaption>
+                </figure>
+
+                <h4>Reflection</h4>
+
+                <p>
+                    Virtual labs help connect classroom concepts to actual
+                    troubleshooting steps. They allow me to practice commands,
+                    make configuration changes, identify mistakes, and verify
+                    connectivity without affecting a production network.
+                </p>
+            </article>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+
+        <!-- Academic projects -->
+        <section id="academic" class="competency-section">
+            <div class="section-heading">
+                <h2>Academic Projects</h2>
+
+                <p>
+                    My coursework has included programming, databases, web
+                    development, and other technical problem-solving projects.
+                </p>
+            </div>
+
+            <article class="project-card featured-project">
+                <h3>Programming and Database Coursework</h3>
+
+                <p>
+                    My academic projects have included Python applications,
+                    SQL queries, database design, and web development. These
+                    assignments gave me experience organizing data, writing
+                    logic, testing results, and correcting problems before
+                    considering a project complete.
+                </p>
+
+                <!-- Code artifact -->
+                <figure class="project-artifact">
+                    <pre class="code-preview"><code>SELECT department,
+       COUNT(*) AS employee_count
+FROM employees
+GROUP BY department
+ORDER BY employee_count DESC;</code></pre>
+
+                    <figcaption>
+                        Example of a grouped SQL query
+                    </figcaption>
+                </figure>
+
+                <h4>Reflection</h4>
+
+                <p>
+                    Programming and database projects have helped me become
+                    more comfortable breaking larger problems into smaller
+                    steps. They have also reinforced the importance of testing,
+                    clear organization, and careful review.
+                </p>
+            </article>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+
+        <!-- Skills table -->
+        <section class="competency-section">
+            <div class="section-heading">
+                <h2>Technical Skills Overview</h2>
+
+                <p>
+                    This table summarizes several technical areas represented
+                    throughout my professional experience and coursework.
+                </p>
+            </div>
+
+            <article class="project-card featured-project">
+                <div class="table-container">
+                    <table class="skills-table">
+                        <caption>
+                            Information Technology Skills and Experience
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Skill Area</th>
+                                <th scope="col">Related Experience</th>
+                                <th scope="col">Practical Application</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Network Engineering</th>
+                                <td>
+                                    Routing, switching, IP addressing, and
+                                    virtual network labs
+                                </td>
+                                <td>
+                                    Building and troubleshooting reliable
+                                    network connections
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Server Administration</th>
+                                <td>
+                                    Server monitoring, infrastructure support,
+                                    and workload management
+                                </td>
+                                <td>
+                                    Maintaining system availability and
+                                    reviewing server performance
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Database Development</th>
+                                <td>
+                                    SQL queries, database design, and records
+                                    management systems
+                                </td>
+                                <td>
+                                    Organizing, retrieving, and reviewing
+                                    information accurately
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Web Development</th>
+                                <td>
+                                    Semantic HTML, responsive CSS, Grid,
+                                    Flexbox, and media queries
+                                </td>
+                                <td>
+                                    Creating accessible websites that work
+                                    across different screen sizes
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+        </section>
+    </main>
+
+    <!-- Contact footer -->
+    <footer class="contact-footer">
+        <div class="footer-contact">
+            <p>
+                <img
+                    src="images/phone-icon.png"
+                    alt="Phone"
+                    class="contact-icon"
+                >
+                (555) 555-4355
+            </p>
+
+            <p>
+                <img
+                    src="images/email-icon.png"
+                    alt="Email"
+                    class="contact-icon"
+                >
+
+                <a href="mailto:swbw42@missouri.edu">
+                    swbw42@missouri.edu
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
