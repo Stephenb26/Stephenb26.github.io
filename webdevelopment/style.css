@@ -1,7 +1,7 @@
 /*
     Name: Stephen Bean
     File: style.css
-    Date: July 21, 2026
+    Date: July 24, 2026
     Course: IS LT 4355
     Description: Main styles for my portfolio website.
 */
@@ -11,11 +11,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Main headings */
+/* Custom font from Google Fonts applied to site */
+/* Custom styles for all <h1> elements */
 h1 {
     color: #0F2742;
     font-family: Merriweather, Georgia, serif;
     font-size: 36px;
+    text-shadow: 1px 1px 2px rgba(15, 39, 66, 0.18);
 }
 
 /* Paragraph text */
@@ -225,6 +227,11 @@ p {
 
 .home-contact p {
     line-height: 1.6;
+}
+
+/* Custom style for home page h2 elements */
+.home-main h2 {
+    letter-spacing: 0.6px;
 }
 
 /* About page grid */
@@ -599,6 +606,57 @@ p {
     text-decoration: underline;
 }
 
+/* Skills table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.skills-table {
+    width: 100%;
+    min-width: 650px;
+    border: 2px solid #0F2742;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills-table caption {
+    color: #0F2742;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 0 12px;
+    text-align: left;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #0F2742;
+    padding: 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.skills-table thead th {
+    color: #FFFFFF;
+    background-color: #0F2742;
+}
+
+/* Alternate table rows */
+.skills-table tbody tr:nth-child(odd) {
+    background-color: #E4EAF1;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+.skills-table tbody th {
+    color: #0F2742;
+    font-weight: bold;
+}
+
 /* Contact page */
 .contact-main {
     width: 90%;
@@ -731,6 +789,13 @@ p {
     width: 24px;
     height: 24px;
     object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Footer icon animation */
+.contact-icon:hover {
+    transform: scale(1.25) rotate(6deg);
+    filter: drop-shadow(0 0 5px #D4AF37);
 }
 
 /* Tablet layout */
@@ -917,6 +982,20 @@ p {
     .code-preview {
         font-size: 13px;
         padding: 14px;
+    }
+
+    /* Responsive table */
+    .skills-table {
+        font-size: 14px;
+    }
+
+    .skills-table caption {
+        font-size: 19px;
+    }
+
+    .skills-table th,
+    .skills-table td {
+        padding: 10px;
     }
 
     /* Mobile contact page */
