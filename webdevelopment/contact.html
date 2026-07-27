@@ -4,8 +4,9 @@
 <!--
     Name: Stephen Bean
     File: contact.html
-    Date: July 12, 2026
+    Date: July 26, 2026
     Course: IS LT 4355
+    Description: Contact page for my personal portfolio website.
 -->
 
 <head>
@@ -16,6 +17,15 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom font used here -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
@@ -35,35 +45,46 @@
             <span class="site-name">Stephen Bean</span>
         </div>
 
+        <!-- Mobile menu -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="reflection.html">Reflection</a></li>
 
-           <li class="dropdown">
-    <a href="project.html">Portfolio</a>
+                <li class="dropdown">
+                    <a href="project.html">Portfolio</a>
 
-    <ul class="dropdown-menu">
-        <li>
-            <a href="project.html#professional">
-                Professional Projects
-            </a>
-        </li>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="project.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
 
-        <li>
-            <a href="project.html#technical">
-                Technical Projects
-            </a>
-        </li>
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
 
-        <li>
-            <a href="project.html#academic">
-                Academic Projects
-            </a>
-        </li>
-    </ul>
-</li>
+                        <li>
+                            <a href="project.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -78,8 +99,8 @@
             <h1>Contact Me</h1>
 
             <p>
-                Thank you for stopping by! Complete the form below
-                if you would like to contact me.
+                Thank you for stopping by! Complete the form below if you
+                would like to contact me.
             </p>
 
             <!-- Contact form -->
@@ -87,6 +108,7 @@
 
                 <div class="form-group">
                     <label for="title">Title</label>
+
                     <select id="title" name="title" required>
                         <option value="" disabled selected>
                             Select your title
@@ -100,28 +122,35 @@
 
                 <div class="form-group">
                     <label for="full-name">Full Name</label>
+
                     <input
                         type="text"
                         id="full-name"
                         name="full-name"
                         placeholder="Enter your full name"
+                        autocomplete="name"
                         required
                     >
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
+
                     <input
                         type="email"
                         id="email"
                         name="email"
                         placeholder="Enter your email address"
+                        autocomplete="email"
                         required
                     >
                 </div>
 
                 <div class="form-group">
-                    <label for="contact-reason">Reason for Contact</label>
+                    <label for="contact-reason">
+                        Reason for Contact
+                    </label>
+
                     <select
                         id="contact-reason"
                         name="contact-reason"
@@ -130,15 +159,19 @@
                         <option value="" disabled selected>
                             Select a reason for contacting me
                         </option>
+
                         <option value="employment">
                             Employment Opportunity
                         </option>
+
                         <option value="networking">
                             Professional Networking
                         </option>
+
                         <option value="project">
                             Project Question
                         </option>
+
                         <option value="general">
                             General Message
                         </option>
@@ -147,6 +180,7 @@
 
                 <div class="form-group">
                     <label for="message">Message</label>
+
                     <textarea
                         id="message"
                         name="message"
@@ -181,6 +215,7 @@
                     alt="Email"
                     class="contact-icon"
                 >
+
                 <a href="mailto:swbw42@missouri.edu">
                     swbw42@missouri.edu
                 </a>
