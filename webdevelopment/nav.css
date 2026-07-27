@@ -1,7 +1,7 @@
 /*
     Name: Stephen Bean
     File: nav.css
-    Date: July 21, 2026
+    Date: July 26, 2026
     Course: IS LT 4355
     Description: Responsive navigation styles for my portfolio website.
 */
@@ -37,7 +37,7 @@
     font-weight: bold;
 }
 
-/* Mobile controls hidden on desktop */
+/* Hide mobile controls on desktop */
 .menu-toggle,
 .hamburger {
     display: none;
@@ -73,10 +73,10 @@
 .main-nav a {
     display: block;
     color: #F5F7FA;
-    text-decoration: none;
-    font-size: 17px;
-    padding: 10px 14px;
     border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 17px;
+    text-decoration: none;
 }
 
 .main-nav a:hover,
@@ -91,7 +91,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 180px;
+    min-width: 210px;
     margin: 0;
     padding: 0;
     background-color: #0F2742;
@@ -138,8 +138,9 @@
         font-size: 19px;
     }
 
-    /* Hidden checkbox controls the menu */
+    /* Hidden checkbox controls menu */
     .menu-toggle {
+        display: block;
         position: absolute;
         width: 1px;
         height: 1px;
@@ -150,12 +151,18 @@
     .hamburger {
         display: block;
         color: #F5F7FA;
+        border-radius: 4px;
         font-size: 32px;
         line-height: 1;
         cursor: pointer;
     }
 
-    /* Navigation hidden until clicked */
+    .menu-toggle:focus + .hamburger {
+        outline: 2px solid #D4AF37;
+        outline-offset: 4px;
+    }
+
+    /* Hide navigation until selected */
     .main-nav {
         display: none;
         flex-basis: 100%;
@@ -163,12 +170,12 @@
         margin-top: 12px;
     }
 
-    /* Show navigation when checked */
+    /* Show navigation when selected */
     .menu-toggle:checked ~ .main-nav {
         display: block;
     }
 
-    /* Change hamburger to an X */
+    /* Change hamburger into an X */
     .menu-toggle:checked + .hamburger .menu-icon {
         display: none;
     }
@@ -177,7 +184,7 @@
         display: inline;
     }
 
-    /* Stack mobile navigation links */
+    /* Stack mobile links */
     .main-nav > ul {
         flex-direction: column;
         gap: 4px;
@@ -187,10 +194,22 @@
         text-align: center;
     }
 
-    /* Dropdown remains unavailable on mobile */
+    /* Display Portfolio links in mobile menu */
     .main-nav .dropdown-menu,
     .main-nav .dropdown:hover .dropdown-menu,
     .main-nav .dropdown:focus-within .dropdown-menu {
-        display: none;
+        display: block;
+        position: static;
+        min-width: 0;
+        margin: 4px 18px 8px;
+        background-color: #163A5F;
+        border: 0;
+        border-left: 3px solid #D4AF37;
+    }
+
+    .main-nav .dropdown-menu a {
+        padding: 8px 12px;
+        font-size: 15px;
+        white-space: normal;
     }
 }
