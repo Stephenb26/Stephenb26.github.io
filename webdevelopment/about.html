@@ -4,8 +4,9 @@
 <!--
     Name: Stephen Bean
     File: about.html
-    Date: July 18, 2026
+    Date: July 26, 2026
     Course: IS LT 4355
+    Description: About page for my personal portfolio website.
 -->
 
 <head>
@@ -17,6 +18,15 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom font used here -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
@@ -27,12 +37,26 @@
     <!-- Header and navigation -->
     <header class="site-header">
         <div class="logo-area">
-            <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
+            <img
+                src="logo.png"
+                alt="Stephen Bean site logo"
+                class="site-logo"
+            >
             <span class="site-name">Stephen Bean</span>
         </div>
 
-        <!-- Mobile menu icon -->
-        <span class="hamburger" aria-label="Mobile menu">&#9776;</span>
+        <!-- Mobile menu -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
 
         <nav class="main-nav">
             <ul>
@@ -42,20 +66,23 @@
 
                 <li class="dropdown">
                     <a href="project.html">Portfolio</a>
+
                     <ul class="dropdown-menu">
                         <li>
                             <a href="project.html#professional">
                                 Professional Projects
                             </a>
                         </li>
+
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
+
                         <li>
                             <a href="project.html#academic">
                                 Academic Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="project.html#technical">
-                                Technical Skills
                             </a>
                         </li>
                     </ul>
@@ -83,23 +110,31 @@
         <!-- Personal background -->
         <section class="personal-background">
             <h2>Personal Background</h2>
+
             <p>
-                My name is Stephen Bean, and I currently live in North Texas. I previously lived in Missouri for
-                several years before moving back home. I am married and have two young children. I am a senior
-                wrapping up this degree after making a career change. My hobbies include traveling, shooting, and
-                taking my kids to new places.
+                My name is Stephen Bean, and I currently live in North Texas.
+                I previously lived in Missouri for several years before moving
+                back home. I am married and have two young children. I am a
+                senior wrapping up this degree after making a career change.
+                My hobbies include traveling, shooting, and taking my kids to
+                new places.
             </p>
         </section>
 
         <!-- Professional goals -->
         <section class="professional-goals">
             <h2>Professional and Academic Goals</h2>
+
             <p>
-                I currently manage IT infrastructure for emergency service personnel for a municipal government in
-                the Dallas area. My career aspirations include moving into a director role because I enjoy leading
-                teams and helping employees develop and succeed. Academically, I am also pursuing an MBA, which
-                will be my third and final degree. My career interests include network engineering, network security,
-                and maintaining a large server fleet for my organization. I enjoy my job and the challenges it brings.
+                I currently manage IT infrastructure for emergency service
+                personnel for a municipal government in the Dallas area. My
+                career aspirations include moving into a director role because
+                I enjoy leading teams and helping employees develop and
+                succeed. Academically, I am also pursuing an MBA, which will be
+                my third and final degree. My career interests include network
+                engineering, network security, and maintaining a large server
+                fleet for my organization. I enjoy my job and the challenges
+                it brings.
             </p>
         </section>
 
@@ -119,12 +154,16 @@
         <!-- Resume link -->
         <section class="resume-section">
             <h2>Resume</h2>
-            <p>A copy of my resume is available below.</p>
+
+            <p>
+                A copy of my resume is available below.
+            </p>
 
             <a
                 href="Stephen_Bean_Resume.pdf"
                 class="resume-link"
                 target="_blank"
+                rel="noopener"
             >
                 View My Resume
             </a>
@@ -143,7 +182,10 @@
                 >
                 Your browser does not support the video tag.
             </video>
-            <figcaption>My professional video introduction</figcaption>
+
+            <figcaption>
+                My professional video introduction
+            </figcaption>
         </figure>
     </main>
 
@@ -165,8 +207,9 @@
                     alt="Email"
                     class="contact-icon"
                 >
+
                 <a href="mailto:swbw42@missouri.edu">
-                    noe-mail@missouri.edu
+                    swbw42@missouri.edu
                 </a>
             </p>
         </div>
