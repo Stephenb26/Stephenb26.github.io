@@ -4,8 +4,9 @@
 <!--
     Name: Stephen Bean
     File: reflection.html
-    Date: July 10, 2026
+    Date: July 26, 2026
     Course: IS LT 4355
+    Description: Personal reflection page for my portfolio website.
 -->
 
 <head>
@@ -13,6 +14,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Stephen Bean Reflection</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom font used here -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Website styles -->
     <link rel="stylesheet" href="style.css">
@@ -24,9 +37,26 @@
     <!-- Header and navigation -->
     <header class="site-header">
         <div class="logo-area">
-            <img src="logo.png" alt="Stephen Bean site logo" class="site-logo">
+            <img
+                src="logo.png"
+                alt="Stephen Bean site logo"
+                class="site-logo"
+            >
             <span class="site-name">Stephen Bean</span>
         </div>
+
+        <!-- Mobile menu -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="hamburger">
+            <span class="menu-icon">&#9776;</span>
+            <span class="close-icon">&times;</span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </label>
 
         <nav class="main-nav">
             <ul>
@@ -35,28 +65,28 @@
                 <li><a href="reflection.html">Reflection</a></li>
 
                 <li class="dropdown">
-    <a href="project.html">Portfolio</a>
+                    <a href="project.html">Portfolio</a>
 
-    <ul class="dropdown-menu">
-        <li>
-            <a href="project.html#professional">
-                Professional Projects
-            </a>
-        </li>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="project.html#professional">
+                                Professional Projects
+                            </a>
+                        </li>
 
-        <li>
-            <a href="project.html#technical">
-                Technical Projects
-            </a>
-        </li>
+                        <li>
+                            <a href="project.html#technical">
+                                Technical Projects
+                            </a>
+                        </li>
 
-        <li>
-            <a href="project.html#academic">
-                Academic Projects
-            </a>
-        </li>
-    </ul>
-</li>
+                        <li>
+                            <a href="project.html#academic">
+                                Academic Projects
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -67,41 +97,70 @@
     <main>
         <section class="reflection-box">
             <h1>Personal Reflection</h1>
+
             <h2>Career and Course Reflection</h2>
 
             <p class="first-reflection">
-                Building this portfolio has helped me think more clearly about how my academic work,
-                professional experience, and long-term career goals connect. My background is in public
-                service and information technology, and this website gives me a place to organize that
-                experience in a way that is easier for others to understand.
+                Building this portfolio has helped me think more clearly
+                about how my academic work, professional experience, and
+                long-term career goals connect. My background is in public
+                service and information technology, and this website gives
+                me a place to organize that experience in a way that is
+                easier for others to understand.
             </p>
 
             <p>
-                One of the main things I have learned through this course is the importance of planning
-                before coding. It is easy to want to start building pages right away, but the wireframes,
-                design plan, color choices, and navigation structure all helped me see how much thought
-                goes into a usable website before the actual coding begins.
+                One of the main things I have learned through this course is
+                the importance of planning before coding. It is easy to want
+                to start building pages right away, but the wireframes,
+                design plan, color choices, and navigation structure all
+                helped me see how much thought goes into a usable website
+                before the actual coding begins.
             </p>
 
             <p>
-                I have also learned that small details in HTML and CSS matter. A missing tag, incorrect
-                file path, or poorly organized stylesheet can quickly affect how a page displays. Working
-                through those issues has helped me become more comfortable troubleshooting and checking
-                my work before submitting it.
+                I have also learned that small details in HTML and CSS matter.
+                A missing tag, incorrect file path, or poorly organized
+                stylesheet can quickly affect how a page displays. Working
+                through those issues has helped me become more comfortable
+                troubleshooting and checking my work before submitting it.
             </p>
 
             <p>
-                My long-term career goal is to continue growing in information technology and eventually
-                move into a director-level role. I enjoy leading teams, solving technical problems, and
-                helping employees succeed. This portfolio supports that goal by giving me a professional
-                space to show my education, technical projects, and career growth.
+                My long-term career goal is to continue growing in information
+                technology and eventually move into a director-level role. I
+                enjoy leading teams, solving technical problems, and helping
+                employees succeed. This portfolio supports that goal by giving
+                me a professional space to show my education, technical
+                projects, and career growth.
             </p>
         </section>
     </main>
 
-    <!-- Page footer -->
-    <footer>
-        <p>Stephen Bean | July 10, 2026</p>
+    <!-- Contact footer -->
+    <footer class="contact-footer">
+        <div class="footer-contact">
+            <p>
+                <img
+                    src="images/phone-icon.png"
+                    alt="Phone"
+                    class="contact-icon"
+                >
+                (555) 555-4355
+            </p>
+
+            <p>
+                <img
+                    src="images/email-icon.png"
+                    alt="Email"
+                    class="contact-icon"
+                >
+
+                <a href="mailto:swbw42@missouri.edu">
+                    swbw42@missouri.edu
+                </a>
+            </p>
+        </div>
     </footer>
 
 </body>
